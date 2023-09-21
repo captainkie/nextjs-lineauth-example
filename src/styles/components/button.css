@@ -1,0 +1,25 @@
+.btn {
+  @apply relative flex h-[52px] w-full items-center justify-center rounded-[34px] bg-project-orange-500 text-sm font-medium text-white;
+
+  &:before,
+  &:after {
+    @apply absolute right-2 top-1/2 h-9 w-9 -translate-y-1/2 rounded-full content-[''];
+  }
+  &:before {
+    @apply bg-white;
+  }
+  &:after {
+    @apply bg-angle-right-orange bg-center bg-no-repeat;
+  }
+
+  &.-dark-style {
+    @apply bg-[#353F46];
+
+    &:before {
+      @apply bg-project-orange-500;
+    }
+    &:after {
+      @apply brightness-0 invert;
+    }
+  }
+}

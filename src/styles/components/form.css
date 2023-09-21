@@ -1,0 +1,30 @@
+.form-input {
+  @apply h-[43px] w-full border-0 border-b border-project-gray-600 bg-project-gray-500 px-4 text-xs text-project-gray-700 transition-all duration-150 ease-out focus:border-project-blue-500 focus:ring-0;
+}
+
+.form-checkbox-style {
+  @apply relative w-full;
+
+  input {
+    @apply absolute -left-[9999px] opacity-0;
+
+    &:checked ~ label:after {
+      @apply opacity-100;
+    }
+  }
+
+  label {
+    @apply relative flex min-h-[18px] gap-x-2 text-xs text-project-gray-700;
+
+    &:before {
+      @apply block h-[18px] w-[18px] shrink-0 rounded border border-project-gray-600 bg-project-gray-500 content-[''];
+    }
+    &:after {
+      @apply absolute left-0 top-0 h-[18px] w-[18px] bg-check bg-[length:60%] bg-center bg-no-repeat opacity-0 transition-all duration-150 ease-out content-[''];
+    }
+  }
+}
+
+.text-validate {
+  @apply mt-1 text-right text-xs text-project-orange-500;
+}
